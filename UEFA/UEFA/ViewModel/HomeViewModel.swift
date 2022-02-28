@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeViewModelProtocol {
+    func loadData()
     func teamName() -> String
     func backgroundImage() -> UIImage?
     func tabsViewColor() -> UIColor
@@ -16,21 +17,27 @@ protocol HomeViewModelProtocol {
 }
 
 public class HomeViewModel: HomeViewModelProtocol {
-    
-    private let team: Team
     private let type: Championship
+    private var team: Team?
     
     // MARK: Init
     
-    init(team: Team, type: Championship) {
-        self.team = team
+    init(type: Championship) {
         self.type = type
     }
     
     // MARK: Public
     
+    func loadData() {
+        DataService.getData { [weak self] team in
+            guard let self = self else { return }
+            self.team = team
+        }
+    }
+    
     public func teamName() -> String {
-        team.name
+        guard let team = team else { return "" }
+        return team.name
     }
     
     public func backgroundImage() -> UIImage? {

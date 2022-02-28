@@ -8,12 +8,12 @@
 import Foundation
 
 public protocol DataServiceProtocol {
-    static func getData() -> Team
+    static func getData(completion: (Team) -> Void)
 }
 
 public struct DataService: DataServiceProtocol {
     
-    public static func getData() -> Team {
+    public static func getData(completion: (Team) -> Void) {
         //goalkeepers
         let firstGoalKeeper = Player(name: "Marc-Andre ter Stegen", country: "Germany", status: "24")
         let secondGoalKeeper = Player(name: "Neto", country: "Brazil", status: "24")
@@ -55,6 +55,6 @@ public struct DataService: DataServiceProtocol {
         let coach = Player(name: "Xavi", country: "Spain", status: "24")
         let coaches = SquadRole(name: "Coach", players: [coach])
         
-        return Team(name: "Barcelona", squad: [goalKeepers, defenders, mildfielders, forwards, coaches])
+        completion(Team(name: "Barcelona", squad: [goalKeepers, defenders, mildfielders, forwards, coaches]))
     }
 }

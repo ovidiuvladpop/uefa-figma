@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 
 protocol SquadViewModelProtocol {
+    func loadData()
     func numberOfSections() -> Int
     func numberOfRowsInSection(_ section: Int) -> Int
     func titleForHeader(in section: Int) -> String
-    func squadCellViewModel(for indexPath: IndexPath) -> SquadCellViewModel
+    func squadCellViewModel(for indexPath: IndexPath) -> SquadCellViewModel?
     func isLastCell(from indexPath: IndexPath) -> Bool
     func isLastSection(_ section: Int) -> Bool
     func squadCellBackgroundColor() -> UIColor
@@ -23,41 +24,53 @@ protocol SquadViewModelProtocol {
 
 public class SquadViewModel: SquadViewModelProtocol {
     
-    private let team: Team
     private let type: Championship
+    private var team: Team?
     
     // MARK: Init
     
-    init(team: Team, type: Championship) {
-        self.team = team
+    init(type: Championship) {
         self.type = type
     }
     
     // MARK: Public
     
+    public func loadData() {
+        DataService.getData { [weak self] team in
+            guard let self = self else { return }
+            self.team = team
+        }
+    }
+    
     public func numberOfSections() -> Int {
-        team.squad.count
+        guard let team = team else { return 0 }
+        return team.squad.count
     }
     
     public func numberOfRowsInSection(_ section: Int) -> Int {
-        team.squad[section].players.count
+        guard let team = team else { return 0 }
+        return team.squad[section].players.count
     }
     
     public func titleForHeader(in section: Int) -> String {
-        team.squad[section].name
+        guard let team = team else { return "" }
+        return team.squad[section].name
     }
     
-    public func squadCellViewModel(for indexPath: IndexPath) -> SquadCellViewModel {
+    public func squadCellViewModel(for indexPath: IndexPath) -> SquadCellViewModel? {
+        guard let team = team else { return nil }
         let player = team.squad[indexPath.section].players[indexPath.row]
         return SquadCellViewModel(playerName: player.name, country: player.country, status: player.status)
     }
     
     public func isLastCell(from indexPath: IndexPath) -> Bool {
-        (team.squad[indexPath.section].players.count - 1) == indexPath.row
+        guard let team = team else { return false }
+        return (team.squad[indexPath.section].players.count - 1) == indexPath.row
     }
     
     public func isLastSection(_ section: Int) -> Bool {
-        (team.squad.count - 1) == section
+        guard let team = team else { return false }
+        return (team.squad.count - 1) == section
     }
     
     public func squadCellBackgroundColor() -> UIColor {

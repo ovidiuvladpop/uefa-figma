@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.loadData()
         addTargets()
         setupHeaderView()
         setupTabsView()

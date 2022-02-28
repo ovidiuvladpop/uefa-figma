@@ -27,6 +27,7 @@ class SquadTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.loadData()
         setupTableView()
     }
     
@@ -50,7 +51,7 @@ extension SquadTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SquadTableViewCell.cellIdentifier, for: indexPath) as? SquadTableViewCell else { return UITableViewCell() }
-        let cellViewModel = viewModel.squadCellViewModel(for: indexPath)
+        guard let cellViewModel = viewModel.squadCellViewModel(for: indexPath) else { return UITableViewCell() }
         cell.setup(viewModel: cellViewModel)
         cell.contentView.backgroundColor = viewModel.squadCellBackgroundColor()
         
