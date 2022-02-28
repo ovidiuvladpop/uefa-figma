@@ -35,6 +35,7 @@ class SquadTableViewController: UITableViewController {
     private func setupTableView() {
         SquadTableViewCell.register(tableView: tableView)
         tableView.backgroundColor = viewModel.tableViewBackgroundColor()
+        tableView.separatorColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 0.1)
     }
 }
 
