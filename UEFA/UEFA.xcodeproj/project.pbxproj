@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		192F42C427CBA8BB00DC06C3 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F42C327CBA8BB00DC06C3 /* RootCoordinator.swift */; };
 		192F42C727CBC5E900DC06C3 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F42C627CBC5E900DC06C3 /* Consts.swift */; };
+		19440D4A27CD1377001D69F4 /* SquadTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19440D4927CD1377001D69F4 /* SquadTableViewFooter.xib */; };
+		19440D4D27CD1384001D69F4 /* SquadTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19440D4C27CD1384001D69F4 /* SquadTableViewFooter.swift */; };
 		198C3C8127C9150D0043D768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198C3C8027C9150D0043D768 /* AppDelegate.swift */; };
 		198C3C8827C9150D0043D768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198C3C8627C9150D0043D768 /* Main.storyboard */; };
 		198C3C8A27C9150E0043D768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198C3C8927C9150E0043D768 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		192F42C327CBA8BB00DC06C3 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		192F42C627CBC5E900DC06C3 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		19440D4927CD1377001D69F4 /* SquadTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquadTableViewFooter.xib; sourceTree = "<group>"; };
+		19440D4C27CD1384001D69F4 /* SquadTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadTableViewFooter.swift; sourceTree = "<group>"; };
 		198C3C7D27C9150D0043D768 /* UEFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198C3C8027C9150D0043D768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198C3C8727C9150D0043D768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 				19AE5E2927CB79ED00CB81C1 /* SquadTableViewHeader.swift */,
 				19AE5E3327CB7B6800CB81C1 /* SquadTableViewCell.swift */,
 				19AE5E3427CB7B6800CB81C1 /* SquadTableViewCell.xib */,
+				19440D4927CD1377001D69F4 /* SquadTableViewFooter.xib */,
+				19440D4C27CD1384001D69F4 /* SquadTableViewFooter.swift */,
 			);
 			path = SquadScreen;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				19AE5E1E27CA12C900CB81C1 /* SF-Pro.ttf in Resources */,
 				198C3C8A27C9150E0043D768 /* Assets.xcassets in Resources */,
 				198C3C8827C9150D0043D768 /* Main.storyboard in Resources */,
+				19440D4A27CD1377001D69F4 /* SquadTableViewFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +366,7 @@
 				198C3C8127C9150D0043D768 /* AppDelegate.swift in Sources */,
 				198C3CA427C922F40043D768 /* WelcomeViewController.swift in Sources */,
 				19ACA1BC27CC0327007FDAFA /* UIImage+Resources.swift in Sources */,
+				19440D4D27CD1384001D69F4 /* SquadTableViewFooter.swift in Sources */,
 				19ACA1F727CCA7EC007FDAFA /* StatsViewController.swift in Sources */,
 				198C3C9C27C91C3F0043D768 /* MainCoordinator.swift in Sources */,
 				19ACA1F227CCA7E2007FDAFA /* GroupsViewController.swift in Sources */,

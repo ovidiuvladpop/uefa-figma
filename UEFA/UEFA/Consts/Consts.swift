@@ -15,6 +15,7 @@ public enum UEFAConsts {
         public static let squadTableViewHeaderHeight: CGFloat = 50
         public static let squadTableViewFooterDefaultHeight: CGFloat = 8
         public static let squadTableViewFooterExtendedHeight: CGFloat = 92
+        public static let squadTableViewFooterLabel = "* Player B"
     }
     
     public enum WelcomeScreen {

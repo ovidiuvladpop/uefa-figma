@@ -78,7 +78,7 @@ extension SquadTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView(frame: view.bounds)
+        let footerView = viewModel.isLastSection(section) ? SquadTableViewFooter() : UIView(frame: view.bounds)
         footerView.backgroundColor = viewModel.squadFooterBackgroundColor()
         
         return footerView
