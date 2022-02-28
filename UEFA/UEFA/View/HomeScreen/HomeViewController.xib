@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="UEFA" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="23W-Dg-dda" id="s53-ng-Dww"/>
                 <outlet property="headerContentView" destination="CJB-a7-AH8" id="FI7-L2-ELV"/>
-                <outlet property="tableView" destination="lKa-J0-SSl" id="1UP-wf-wSb"/>
                 <outlet property="tabsContentView" destination="QBH-kT-aZd" id="P1G-R3-b9P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,26 +35,24 @@
                         <constraint firstAttribute="height" constant="44" id="KWB-Cj-ZN3"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lKa-J0-SSl">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23W-Dg-dda" userLabel="Content view">
                     <rect key="frame" x="0.0" y="330" width="414" height="566"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="separatorColor" white="1" alpha="0.095741928807947019" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
-                </tableView>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="lKa-J0-SSl" firstAttribute="top" secondItem="QBH-kT-aZd" secondAttribute="bottom" id="1FX-8r-BOb"/>
-                <constraint firstItem="lKa-J0-SSl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1ti-jC-vJk"/>
+                <constraint firstItem="23W-Dg-dda" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="10a-Bb-Flr"/>
                 <constraint firstAttribute="trailing" secondItem="CJB-a7-AH8" secondAttribute="trailing" id="FHo-fM-KAB"/>
                 <constraint firstItem="CJB-a7-AH8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pl0-4i-Lv3"/>
                 <constraint firstItem="QBH-kT-aZd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vd8-53-mL0"/>
-                <constraint firstItem="lKa-J0-SSl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c1n-Fj-ztg"/>
                 <constraint firstItem="QBH-kT-aZd" firstAttribute="top" secondItem="CJB-a7-AH8" secondAttribute="bottom" id="iyA-hu-3GK"/>
+                <constraint firstItem="23W-Dg-dda" firstAttribute="top" secondItem="QBH-kT-aZd" secondAttribute="bottom" id="m9m-wU-Wap"/>
+                <constraint firstItem="23W-Dg-dda" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mGd-7c-Wzo"/>
                 <constraint firstItem="CJB-a7-AH8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pLs-hz-dmk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QBH-kT-aZd" secondAttribute="trailing" id="pal-9z-be1"/>
-                <constraint firstAttribute="bottom" secondItem="lKa-J0-SSl" secondAttribute="bottom" id="xDV-V9-g3f"/>
+                <constraint firstAttribute="bottom" secondItem="23W-Dg-dda" secondAttribute="bottom" id="whw-2Z-8fF"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>

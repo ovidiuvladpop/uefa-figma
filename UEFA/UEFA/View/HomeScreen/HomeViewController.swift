@@ -11,15 +11,18 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var headerContentView: HeaderView!
     @IBOutlet weak var tabsContentView: TabsView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var contentView: UIView!
     
     weak var coordinator: MainCoordinator?
     private var viewModel: HomeViewModelProtocol
-    
+    private var viewControllers: [UIViewController]
+
     // MARK: Lifecycle
     
-    init(viewModel: HomeViewModel) {
+    init(viewModel: HomeViewModel,
+         viewControllers: [UIViewController]) {
         self.viewModel = viewModel
+        self.viewControllers = viewControllers
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,7 +36,8 @@ class HomeViewController: UIViewController {
         addTargets()
         setupHeaderView()
         setupTabsView()
-        setupTableView()
+        addControllersViews()
+        highlightFirstTab()
     }
     
     // MARK: Private
@@ -56,13 +60,26 @@ class HomeViewController: UIViewController {
     
     private func setupTabsView() {
         tabsContentView.backgroundColor = viewModel.tabsViewColor()
+        tabsContentView.actionButtons.forEach { button in
+            button.setTitleColor(viewModel.tabsHighlightColor(), for: .selected)
+            button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.8), for: .normal)
+        }
     }
     
-    private func setupTableView() {
-        SquadTableViewCell.register(tableView: tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundColor = viewModel.tableViewBackgroundColor()
+    private func highlightFirstTab() {
+        if let firstViewController = viewControllers.first,
+           let firstViewControllerIndex = viewControllers.firstIndex(of: firstViewController) {
+            contentView.bringSubviewToFront(firstViewController.view)
+            tabsContentView.highlightTabElement(index: firstViewControllerIndex)
+            tabsContentView.highlightUnderlineView(index: firstViewControllerIndex, color: viewModel.tabsHighlightColor())
+        }
+    }
+    
+    private func addControllersViews() {
+        viewControllers.forEach { viewController in
+            contentView.addSubview(viewController.view)
+            viewController.view.frame = contentView.bounds
+        }
     }
     
     @objc private func backButtonPressed() {
@@ -71,51 +88,9 @@ class HomeViewController: UIViewController {
     
     @objc private func tabButtonPressed(sender: AnyObject) {
         guard let tabButton = sender as? UIButton else { return }
+        let viewController = viewControllers[tabButton.tag]
+        contentView.bringSubviewToFront(viewController.view)
         tabsContentView.highlightTabElement(index: tabButton.tag)
-    }
-}
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.numberOfSections()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRowsInSection(section)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SquadTableViewCell.cellIdentifier, for: indexPath) as? SquadTableViewCell else { return UITableViewCell() }
-        let cellViewModel = viewModel.squadCellViewModel(for: indexPath)
-        cell.setup(viewModel: cellViewModel)
-        cell.contentView.backgroundColor = viewModel.squadCellBackgroundColor()
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let squadHeaderView = SquadTableViewHeader()
-        squadHeaderView.setHeader(name: viewModel.titleForHeader(in: section), backgroundColor: viewModel.squadHeaderBackgroundColor())
-        
-        return squadHeaderView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        UEFAConsts.SquadDetails.squadTableViewHeaderHeight
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        viewModel.isLastCell(from: indexPath) ? UEFAConsts.SquadDetails.squadTableViewCellExtendedHeight : UEFAConsts.SquadDetails.squadTableViewCellDefaultHeight
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        viewModel.isLastSection(section) ? UEFAConsts.SquadDetails.squadTableViewFooterExtendedHeight : UEFAConsts.SquadDetails.squadTableViewFooterDefaultHeight
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView(frame: view.bounds)
-        footerView.backgroundColor = viewModel.squadFooterBackgroundColor()
-        
-        return footerView
+        tabsContentView.highlightUnderlineView(index: tabButton.tag, color: viewModel.tabsHighlightColor())
     }
 }

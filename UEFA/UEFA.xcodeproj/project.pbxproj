@@ -19,6 +19,17 @@
 		198C3CA527C922F40043D768 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198C3CA327C922F40043D768 /* WelcomeViewController.xib */; };
 		19ACA1B827CBDEA9007FDAFA /* SquadCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1B727CBDEA9007FDAFA /* SquadCellViewModel.swift */; };
 		19ACA1BC27CC0327007FDAFA /* UIImage+Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1BB27CC0327007FDAFA /* UIImage+Resources.swift */; };
+		19ACA1E527CC9BAA007FDAFA /* SquadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1E327CC9BAA007FDAFA /* SquadTableViewController.swift */; };
+		19ACA1E627CC9BAA007FDAFA /* SquadTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA1E427CC9BAA007FDAFA /* SquadTableViewController.xib */; };
+		19ACA1E927CC9C67007FDAFA /* SquadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1E827CC9C67007FDAFA /* SquadViewModel.swift */; };
+		19ACA1ED27CCA7D8007FDAFA /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1EB27CCA7D8007FDAFA /* MatchesViewController.swift */; };
+		19ACA1EE27CCA7D8007FDAFA /* MatchesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA1EC27CCA7D8007FDAFA /* MatchesViewController.xib */; };
+		19ACA1F227CCA7E2007FDAFA /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1F027CCA7E2007FDAFA /* GroupsViewController.swift */; };
+		19ACA1F327CCA7E2007FDAFA /* GroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA1F127CCA7E2007FDAFA /* GroupsViewController.xib */; };
+		19ACA1F727CCA7EC007FDAFA /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1F527CCA7EC007FDAFA /* StatsViewController.swift */; };
+		19ACA1F827CCA7EC007FDAFA /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA1F627CCA7EC007FDAFA /* StatsViewController.xib */; };
+		19ACA1FE27CCA80A007FDAFA /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA1FC27CCA80A007FDAFA /* OverviewViewController.swift */; };
+		19ACA1FF27CCA80A007FDAFA /* OverviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA1FD27CCA80A007FDAFA /* OverviewViewController.xib */; };
 		19AE5E0A27C938D700CB81C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE5E0827C938D700CB81C1 /* HomeViewController.swift */; };
 		19AE5E0B27C938D700CB81C1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19AE5E0927C938D700CB81C1 /* HomeViewController.xib */; };
 		19AE5E1227C9442400CB81C1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE5E1127C9442400CB81C1 /* HeaderView.swift */; };
@@ -52,6 +63,17 @@
 		198C3CA327C922F40043D768 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		19ACA1B727CBDEA9007FDAFA /* SquadCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadCellViewModel.swift; sourceTree = "<group>"; };
 		19ACA1BB27CC0327007FDAFA /* UIImage+Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resources.swift"; sourceTree = "<group>"; };
+		19ACA1E327CC9BAA007FDAFA /* SquadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadTableViewController.swift; sourceTree = "<group>"; };
+		19ACA1E427CC9BAA007FDAFA /* SquadTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquadTableViewController.xib; sourceTree = "<group>"; };
+		19ACA1E827CC9C67007FDAFA /* SquadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadViewModel.swift; sourceTree = "<group>"; };
+		19ACA1EB27CCA7D8007FDAFA /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		19ACA1EC27CCA7D8007FDAFA /* MatchesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchesViewController.xib; sourceTree = "<group>"; };
+		19ACA1F027CCA7E2007FDAFA /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		19ACA1F127CCA7E2007FDAFA /* GroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupsViewController.xib; sourceTree = "<group>"; };
+		19ACA1F527CCA7EC007FDAFA /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		19ACA1F627CCA7EC007FDAFA /* StatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
+		19ACA1FC27CCA80A007FDAFA /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		19ACA1FD27CCA80A007FDAFA /* OverviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewViewController.xib; sourceTree = "<group>"; };
 		19AE5E0827C938D700CB81C1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		19AE5E0927C938D700CB81C1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		19AE5E1127C9442400CB81C1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -136,6 +158,7 @@
 			children = (
 				19AE5E3827CB999000CB81C1 /* HomeViewModel.swift */,
 				19ACA1B727CBDEA9007FDAFA /* SquadCellViewModel.swift */,
+				19ACA1E827CC9C67007FDAFA /* SquadViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +166,8 @@
 		198C3C9927C91B7B0043D768 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19ACA1E127CC9ACF007FDAFA /* SquadScreen */,
+				19ACA1DF27CC9AA7007FDAFA /* EmptyScreen */,
 				19AE5E0727C938C600CB81C1 /* HomeScreen */,
 				198C3CA727C923040043D768 /* WelcomeScreen */,
 				198C3C8627C9150D0043D768 /* Main.storyboard */,
@@ -178,6 +203,34 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		19ACA1DF27CC9AA7007FDAFA /* EmptyScreen */ = {
+			isa = PBXGroup;
+			children = (
+				19ACA1FC27CCA80A007FDAFA /* OverviewViewController.swift */,
+				19ACA1FD27CCA80A007FDAFA /* OverviewViewController.xib */,
+				19ACA1EB27CCA7D8007FDAFA /* MatchesViewController.swift */,
+				19ACA1EC27CCA7D8007FDAFA /* MatchesViewController.xib */,
+				19ACA1F027CCA7E2007FDAFA /* GroupsViewController.swift */,
+				19ACA1F127CCA7E2007FDAFA /* GroupsViewController.xib */,
+				19ACA1F527CCA7EC007FDAFA /* StatsViewController.swift */,
+				19ACA1F627CCA7EC007FDAFA /* StatsViewController.xib */,
+			);
+			path = EmptyScreen;
+			sourceTree = "<group>";
+		};
+		19ACA1E127CC9ACF007FDAFA /* SquadScreen */ = {
+			isa = PBXGroup;
+			children = (
+				19ACA1E327CC9BAA007FDAFA /* SquadTableViewController.swift */,
+				19ACA1E427CC9BAA007FDAFA /* SquadTableViewController.xib */,
+				19AE5E2627CB79E000CB81C1 /* SquadTableViewHeader.xib */,
+				19AE5E2927CB79ED00CB81C1 /* SquadTableViewHeader.swift */,
+				19AE5E3327CB7B6800CB81C1 /* SquadTableViewCell.swift */,
+				19AE5E3427CB7B6800CB81C1 /* SquadTableViewCell.xib */,
+			);
+			path = SquadScreen;
+			sourceTree = "<group>";
+		};
 		19AE5E0727C938C600CB81C1 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,10 +240,6 @@
 				19AE5E1527C9444300CB81C1 /* HeaderView.xib */,
 				19AE5E2027CA775C00CB81C1 /* TabsView.xib */,
 				19AE5E2327CA777600CB81C1 /* TabsView.swift */,
-				19AE5E2627CB79E000CB81C1 /* SquadTableViewHeader.xib */,
-				19AE5E2927CB79ED00CB81C1 /* SquadTableViewHeader.swift */,
-				19AE5E3327CB7B6800CB81C1 /* SquadTableViewCell.swift */,
-				19AE5E3427CB7B6800CB81C1 /* SquadTableViewCell.xib */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -275,8 +324,13 @@
 				198C3CA527C922F40043D768 /* WelcomeViewController.xib in Resources */,
 				19AE5E0B27C938D700CB81C1 /* HomeViewController.xib in Resources */,
 				19AE5E2727CB79E000CB81C1 /* SquadTableViewHeader.xib in Resources */,
+				19ACA1F827CCA7EC007FDAFA /* StatsViewController.xib in Resources */,
+				19ACA1E627CC9BAA007FDAFA /* SquadTableViewController.xib in Resources */,
 				19AE5E2127CA775C00CB81C1 /* TabsView.xib in Resources */,
+				19ACA1F327CCA7E2007FDAFA /* GroupsViewController.xib in Resources */,
+				19ACA1FF27CCA80A007FDAFA /* OverviewViewController.xib in Resources */,
 				19AE5E1B27CA101300CB81C1 /* Champions-Bold.ttf in Resources */,
+				19ACA1EE27CCA7D8007FDAFA /* MatchesViewController.xib in Resources */,
 				19AE5E2D27CB7A6D00CB81C1 /* SF-Pro-Display-Medium.otf in Resources */,
 				19AE5E1627C9444300CB81C1 /* HeaderView.xib in Resources */,
 				19AE5E1E27CA12C900CB81C1 /* SF-Pro.ttf in Resources */,
@@ -293,19 +347,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				19AE5E3C27CB9A2400CB81C1 /* Player.swift in Sources */,
+				19ACA1FE27CCA80A007FDAFA /* OverviewViewController.swift in Sources */,
 				19AE5E0A27C938D700CB81C1 /* HomeViewController.swift in Sources */,
+				19ACA1ED27CCA7D8007FDAFA /* MatchesViewController.swift in Sources */,
 				19AE5E2427CA777600CB81C1 /* TabsView.swift in Sources */,
 				19AE5E3F27CB9B8600CB81C1 /* DataService.swift in Sources */,
+				19ACA1E527CC9BAA007FDAFA /* SquadTableViewController.swift in Sources */,
 				19AE5E1227C9442400CB81C1 /* HeaderView.swift in Sources */,
 				19AE5E3927CB999000CB81C1 /* HomeViewModel.swift in Sources */,
 				19AE5E3527CB7B6800CB81C1 /* SquadTableViewCell.swift in Sources */,
 				198C3C8127C9150D0043D768 /* AppDelegate.swift in Sources */,
 				198C3CA427C922F40043D768 /* WelcomeViewController.swift in Sources */,
 				19ACA1BC27CC0327007FDAFA /* UIImage+Resources.swift in Sources */,
+				19ACA1F727CCA7EC007FDAFA /* StatsViewController.swift in Sources */,
 				198C3C9C27C91C3F0043D768 /* MainCoordinator.swift in Sources */,
+				19ACA1F227CCA7E2007FDAFA /* GroupsViewController.swift in Sources */,
 				19ACA1B827CBDEA9007FDAFA /* SquadCellViewModel.swift in Sources */,
 				192F42C427CBA8BB00DC06C3 /* RootCoordinator.swift in Sources */,
 				192F42C727CBC5E900DC06C3 /* Consts.swift in Sources */,
+				19ACA1E927CC9C67007FDAFA /* SquadViewModel.swift in Sources */,
 				198C3CA027C91C760043D768 /* BaseCoordinatorProtocol.swift in Sources */,
 				19AE5E2A27CB79ED00CB81C1 /* SquadTableViewHeader.swift in Sources */,
 			);

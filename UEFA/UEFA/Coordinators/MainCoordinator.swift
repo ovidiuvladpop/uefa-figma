@@ -25,9 +25,11 @@ class MainCoordinator: BaseCoordinatorProtocol {
     // MARK: Public
     
     func start() {
+        let squadViewModel = SquadViewModel(team: DataService.getData(), type: championship)
         let homeViewModel = HomeViewModel(team: DataService.getData(),
                                           type: championship)
-        let homeViewController = HomeViewController(viewModel: homeViewModel)
+        let homeViewController = HomeViewController(viewModel: homeViewModel,
+                                                    viewControllers: [OverviewViewController(), MatchesViewController(), GroupsViewController(), StatsViewController(), SquadTableViewController(viewModel: squadViewModel)])
         homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)
     }

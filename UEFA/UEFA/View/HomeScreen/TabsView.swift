@@ -17,7 +17,7 @@ class TabsView: UIView {
     @IBOutlet weak var squadButton: UIButton!
     
     public var actionButtons: [UIButton]
-    private var underlineViews: [UIView]
+    public var underlineViews: [UIView]
     
     // MARK: Init
     
@@ -65,19 +65,18 @@ class TabsView: UIView {
         actionButtons.forEach { button in
             button.isSelected = button.tag == index
         }
-        
+    }
+    
+    public func highlightUnderlineView(index: Int, color: UIColor) {
         underlineViews.forEach { view in
-            view.backgroundColor = view.tag == index ? UIColor(red: 90 / 255, green: 247 / 255, blue: 220 / 255, alpha: 1) : .clear
+            view.backgroundColor = view.tag == index ? color : .clear
         }
     }
 }
 
 extension UIButton {
     func customize() -> UIView {
-        setTitleColor(UIColor(red: 90 / 255, green: 247 / 255, blue: 220 / 255, alpha: 1), for: .selected)
-        setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.8), for: .normal)
-        
-        let underlineView = UIView.init(frame: CGRect.init(x: self.bounds.minX, y: self.bounds.maxY, width: self.bounds.size.width, height: 3))
+        let underlineView = UIView.init(frame: CGRect.init(x: self.bounds.minX, y: self.bounds.maxY - 3, width: self.bounds.size.width, height: 3))
         underlineView.backgroundColor = .clear
         underlineView.tag = tag
         addSubview(underlineView)
