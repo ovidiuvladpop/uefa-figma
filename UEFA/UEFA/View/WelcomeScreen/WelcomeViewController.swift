@@ -7,13 +7,11 @@
 
 import UIKit
 
-protocol WelcomeViewControllerDelegate: class {
-    func didPressButton()
-}
-
 class WelcomeViewController: UIViewController {
     
-    weak var delegate: WelcomeViewControllerDelegate?
+    @IBOutlet weak var uefaChampionsLeagueButton: UIButton!
+    @IBOutlet weak var uefaEuropeLeagueButton: UIButton!
+    weak var coordinator: RootCoordinator?
     
     // MARK: Lifecycle
     
@@ -21,13 +19,15 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = true
+        uefaChampionsLeagueButton.setTitle(UEFAConsts.WelcomeScreen.uefaChampionsLeagueButton, for: .normal)
+        uefaEuropeLeagueButton.setTitle(UEFAConsts.WelcomeScreen.uefaEuropeLeagueButton, for: .normal)
     }
     
     @IBAction func uclButtonPressed(_ sender: Any) {
-        delegate?.didPressButton()
+        coordinator?.didPressButton(type: .ucl)
     }
     
     @IBAction func uelButtonPressed(_ sender: Any) {
-        delegate?.didPressButton()
+        coordinator?.didPressButton(type: .uel)
     }
 }

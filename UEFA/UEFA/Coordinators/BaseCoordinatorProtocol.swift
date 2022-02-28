@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-protocol BaseCoordinatorProtocol: class {
+public protocol BaseCoordinatorProtocol: class {
+    var childCoordinators: [BaseCoordinatorProtocol] { get set }
     var navigationController: UINavigationController { get set }
     
     func start()

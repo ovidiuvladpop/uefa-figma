@@ -9,24 +9,31 @@ import Foundation
 import UIKit
 
 class MainCoordinator: BaseCoordinatorProtocol {
+    var childCoordinators = [BaseCoordinatorProtocol]()
     var navigationController: UINavigationController
+    var championship: Championship
+    weak var parentCoordinator: RootCoordinator?
     
     // MARK: Init
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController,
+         type: Championship) {
         self.navigationController = navigationController
+        self.championship = type
     }
     
+    // MARK: Public
+    
     func start() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.delegate = self
-        navigationController.pushViewController(welcomeViewController, animated: true)
-    }
-}
-
-extension MainCoordinator: WelcomeViewControllerDelegate {
-    func didPressButton() {
-        let homeViewController = HomeViewController()
+        let homeViewModel = HomeViewModel(team: DataService.getData(),
+                                          type: championship)
+        let homeViewController = HomeViewController(viewModel: homeViewModel)
+        homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)
+    }
+    
+    public func didPressBackButton() {
+        navigationController.popViewController(animated: true)
+        parentCoordinator?.childDidFinish(self)
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabsView" customModule="UEFA" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Jej-R1-161"/>
+                <outlet property="groupsButton" destination="GCb-dp-eJg" id="bmO-zD-Nuc"/>
+                <outlet property="matchesButton" destination="O9f-Bc-0e0" id="X0L-GU-fPO"/>
+                <outlet property="overviewButton" destination="B1U-XN-NZT" id="cGq-v5-Q3l"/>
+                <outlet property="squadButton" destination="ge5-h7-NkL" id="Hg4-e4-cgj"/>
+                <outlet property="statsButton" destination="rxe-WV-w01" id="bf0-vY-dEm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="756" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Iew-mB-Cdj">
+                    <rect key="frame" x="16" y="0.0" width="699" height="104"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-XN-NZT" userLabel="Overview button">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="104"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9f-Bc-0e0" userLabel="Matches button">
+                            <rect key="frame" x="163.5" y="0.0" width="46" height="104"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-dp-eJg" userLabel="Groups button">
+                            <rect key="frame" x="326.5" y="0.0" width="46" height="104"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-WV-w01" userLabel="Stats button">
+                            <rect key="frame" x="490" y="0.0" width="46" height="104"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge5-h7-NkL" userLabel="Squad button">
+                            <rect key="frame" x="653" y="0.0" width="46" height="104"/>
+                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Iew-mB-Cdj" secondAttribute="bottom" id="0PH-Ud-ceZ"/>
+                <constraint firstItem="Iew-mB-Cdj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="CAT-Le-XDj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Iew-mB-Cdj" secondAttribute="trailing" constant="41" id="HW0-Mf-iI4"/>
+                <constraint firstItem="Iew-mB-Cdj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KTr-9W-7ZB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-339" y="-107"/>
+        </view>
+    </objects>
+</document>
