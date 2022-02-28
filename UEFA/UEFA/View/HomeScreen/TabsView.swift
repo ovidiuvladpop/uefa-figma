@@ -79,6 +79,7 @@ extension UIButton {
         let underlineView = UIView.init(frame: CGRect.init(x: self.bounds.minX, y: self.bounds.maxY - 3, width: self.bounds.size.width, height: 3))
         underlineView.backgroundColor = .clear
         underlineView.tag = tag
+        underlineView.layer.cornerRadius = 1.5
         addSubview(underlineView)
         
         return underlineView

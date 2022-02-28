@@ -31,27 +31,42 @@
                     <rect key="frame" x="16" y="0.0" width="699" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-XN-NZT" userLabel="Overview button">
-                            <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="65" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="K2J-JS-F8a"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                             <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9f-Bc-0e0" userLabel="Matches button">
-                            <rect key="frame" x="163.5" y="0.0" width="46" height="44"/>
+                            <rect key="frame" x="176.5" y="0.0" width="59" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="59" id="D4e-H7-VqM"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                             <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-dp-eJg" userLabel="Groups button">
-                            <rect key="frame" x="326.5" y="0.0" width="46" height="44"/>
+                            <rect key="frame" x="346.5" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="pJu-uq-d17"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                             <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-WV-w01" userLabel="Stats button">
-                            <rect key="frame" x="490" y="0.0" width="46" height="44"/>
+                            <rect key="frame" x="508" y="0.0" width="36" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="ZF8-Tz-uHL"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                             <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge5-h7-NkL" userLabel="Squad button">
-                            <rect key="frame" x="653" y="0.0" width="46" height="44"/>
+                            <rect key="frame" x="655" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="jKv-VS-gu9"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                             <state key="normal" title="Button"/>
                         </button>
