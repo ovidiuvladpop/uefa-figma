@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="contentView" destination="23W-Dg-dda" id="s53-ng-Dww"/>
                 <outlet property="headerContentView" destination="CJB-a7-AH8" id="FI7-L2-ELV"/>
+                <outlet property="headerContentViewHeightConstraint" destination="xy5-1T-Lyv" id="yGN-6e-Cwu"/>
                 <outlet property="tabsContentView" destination="QBH-kT-aZd" id="P1G-R3-b9P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

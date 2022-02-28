@@ -27,3 +27,8 @@ public enum Championship {
     case ucl
     case uel
 }
+
+public enum HeaderState {
+    case expanded
+    case collapsed
+}

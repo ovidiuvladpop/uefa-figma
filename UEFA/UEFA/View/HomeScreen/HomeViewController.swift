@@ -12,10 +12,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var headerContentView: HeaderView!
     @IBOutlet weak var tabsContentView: TabsView!
     @IBOutlet weak var contentView: UIView!
-    
+    @IBOutlet weak var headerContentViewHeightConstraint: NSLayoutConstraint!
     weak var coordinator: MainCoordinator?
     private var viewModel: HomeViewModelProtocol
     private var viewControllers: [UIViewController]
+    private var headerContentViewState: HeaderState
 
     // MARK: Lifecycle
     
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController {
          viewControllers: [UIViewController]) {
         self.viewModel = viewModel
         self.viewControllers = viewControllers
+        self.headerContentViewState = .expanded
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,6 +47,7 @@ class HomeViewController: UIViewController {
     
     private func addTargets() {
         headerContentView.backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        headerContentView.favoriteButton.addTarget(self, action: #selector(favoriteButtonPressed), for: .touchUpInside)
         
         tabsContentView.actionButtons.forEach { actionButton in
             actionButton.addTarget(self, action: #selector(tabButtonPressed(sender:)), for: .touchUpInside)
@@ -85,6 +88,16 @@ class HomeViewController: UIViewController {
     
     @objc private func backButtonPressed() {
         coordinator?.didPressBackButton()
+    }
+    
+    @objc private func favoriteButtonPressed() {
+        UIView.animate(withDuration: 1.0) {
+            self.headerContentViewHeightConstraint.constant = self.headerContentViewState == .expanded ? UEFAConsts.HomeScreen.headerContentViewCollapsedHeight : UEFAConsts.HomeScreen.headerContentViewExpandedHeight
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            self.headerContentViewState = self.headerContentViewState == .expanded ? .collapsed : .expanded
+        }
+
     }
     
     @objc private func tabButtonPressed(sender: AnyObject) {

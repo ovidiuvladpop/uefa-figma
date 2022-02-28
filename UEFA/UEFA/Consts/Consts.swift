@@ -25,6 +25,8 @@ public enum UEFAConsts {
     public enum HomeScreen {
         public static let playingLabel = "Playing"
         public static let roundDescriptionLabel = "Round of 16"
+        public static let headerContentViewExpandedHeight: CGFloat = 286
+        public static let headerContentViewCollapsedHeight: CGFloat = 75
         
         public enum HomeScreenTabs {
             public static let overview = "Overview"

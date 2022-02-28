@@ -22,16 +22,17 @@
                 <outlet property="backgroundView" destination="xV6-pg-no7" id="EwV-Dq-yeL"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Vfv-FF-QHx"/>
                 <outlet property="descriptionLabel" destination="6dW-yK-cLr" id="0E9-2g-F2w"/>
+                <outlet property="favoriteButton" destination="UXO-Z0-yS1" id="YaP-15-1bU"/>
                 <outlet property="playingLabel" destination="oZn-aD-MQL" id="Z0F-76-Xij"/>
                 <outlet property="teamNameLabel" destination="3kB-D4-pNW" id="XJv-Xd-NQ4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="621" height="583"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xV6-pg-no7" userLabel="Background">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xV6-pg-no7" userLabel="Background">
                     <rect key="frame" x="-2" y="-2" width="625" height="587"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWE-eq-tJX" userLabel="Back button">
@@ -43,20 +44,20 @@
                     <state key="normal" image="favorite_icon"/>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team_badge" translatesAutoresizingMaskIntoConstraints="NO" id="w6H-mJ-OJ7" userLabel="Team badge ">
-                    <rect key="frame" x="495" y="423" width="110" height="110"/>
+                    <rect key="frame" x="495" y="178.5" width="110" height="110"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="110" id="PSn-6z-I2P"/>
                         <constraint firstAttribute="width" constant="110" id="tnJ-g0-SGl"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kB-D4-pNW" userLabel="Team name label">
-                    <rect key="frame" x="16" y="358.5" width="107.5" height="52.5"/>
+                    <rect key="frame" x="16" y="114" width="107.5" height="52.5"/>
                     <fontDescription key="fontDescription" name="Champions-Bold" family="Champions" pointSize="48"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZn-aD-MQL" userLabel="Playing label">
-                    <rect key="frame" x="16" y="483" width="35.5" height="18"/>
+                    <rect key="frame" x="16" y="238.5" width="35.5" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="ClW-yI-hZZ"/>
                     </constraints>
@@ -65,7 +66,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dW-yK-cLr" userLabel="Description label">
-                    <rect key="frame" x="16" y="501" width="39.5" height="24"/>
+                    <rect key="frame" x="16" y="256.5" width="39.5" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="YpQ-dC-lzv"/>
                     </constraints>
@@ -77,21 +78,21 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="w6H-mJ-OJ7" secondAttribute="bottom" constant="16" id="0YR-I4-xwm"/>
+                <constraint firstItem="6dW-yK-cLr" firstAttribute="top" secondItem="oZn-aD-MQL" secondAttribute="bottom" id="52b-Az-aDm"/>
                 <constraint firstItem="3kB-D4-pNW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="5zw-Fk-JUq"/>
                 <constraint firstAttribute="bottom" secondItem="xV6-pg-no7" secondAttribute="bottom" constant="-2" id="6yP-sF-E1L"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6dW-yK-cLr" secondAttribute="bottom" constant="24" id="9xg-EN-p5d"/>
                 <constraint firstItem="xV6-pg-no7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-2" id="C3G-dz-CcG"/>
                 <constraint firstItem="oZn-aD-MQL" firstAttribute="top" secondItem="3kB-D4-pNW" secondAttribute="bottom" constant="72" id="EzB-D5-WNI"/>
                 <constraint firstItem="oZn-aD-MQL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FRQ-N2-9dP"/>
                 <constraint firstItem="xV6-pg-no7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-2" id="HQT-82-cZ7"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3kB-D4-pNW" secondAttribute="bottom" constant="138" id="KAY-zI-Stk"/>
                 <constraint firstItem="xV6-pg-no7" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="2" id="VjH-tZ-xpa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w6H-mJ-OJ7" secondAttribute="trailing" constant="16" id="ejx-dW-gDy"/>
+                <constraint firstItem="w6H-mJ-OJ7" firstAttribute="top" secondItem="3kB-D4-pNW" secondAttribute="bottom" constant="12" id="fkp-1N-wPv"/>
                 <constraint firstItem="aWE-eq-tJX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="g1A-gc-fq3"/>
                 <constraint firstItem="6dW-yK-cLr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="mRw-GI-iQt"/>
                 <constraint firstItem="aWE-eq-tJX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="oVi-u0-y8Q"/>
                 <constraint firstItem="UXO-Z0-yS1" firstAttribute="centerY" secondItem="aWE-eq-tJX" secondAttribute="centerY" id="qwZ-a4-CfQ"/>
+                <constraint firstItem="3kB-D4-pNW" firstAttribute="top" secondItem="aWE-eq-tJX" secondAttribute="bottom" constant="24" id="uMt-7x-pOi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UXO-Z0-yS1" secondAttribute="trailing" constant="19" id="xnZ-CD-d6l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
